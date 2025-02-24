@@ -10,7 +10,6 @@ from constants import CHECKPOINT_NAME, INTERVAL_SECONDS
 # GX-Context initialisieren
 context = gx.get_context(mode="file")
 
-# GX-Checkpoint abrufen
 checkpoint = context.checkpoints.get(CHECKPOINT_NAME)
 
 # FastAPI-App erstellen
