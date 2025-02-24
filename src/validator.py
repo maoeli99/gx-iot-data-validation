@@ -28,7 +28,7 @@ def run_checkpoint_periodically(interval):
     """Führt den Checkpoint in einem separaten Thread alle `interval` Sekunden aus."""
     while True:
         try:
-            print("Starte Validierung...")
+            print("Validierung gestartet")
             checkpoint.run()
             print("Validierung erfolgreich ausgeführt.")
         except Exception as e:

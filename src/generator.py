@@ -72,7 +72,7 @@ def generate_data():
     Ausnahme:
         KeyboardInterrupt: Wird ausgelöst, wenn die Simulation manuell vom Benutzer gestoppt wird.
     """
-    print("Starte Simulation... (STRG+C zum Stoppen)")
+    print("Simulation gestartet (STRG+C zum Stoppen)")
     try:
         while True:
             sensor = random.choice(sensors)  # Zufällige Wetterstation auswählen
