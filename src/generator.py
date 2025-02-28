@@ -8,11 +8,11 @@ from constants import DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASSWORD, CYCLE_TIM
 
 # Liste mit verfügbaren Sensoren
 sensors = [
-    Sensor("WS_001", "Berlin"),
-    Sensor("WS_002", "Hamburg"),
-    Sensor("WS_003", "München"),
-    Sensor("WS_004", "Köln"),
-    Sensor("WS_005", "Frankfurt"),
+    Sensor("WS_001", "Ravensburg"),
+    Sensor("WS_002", "Ulm"),
+    Sensor("WS_003", "Friedrichshafen"),
+    Sensor("WS_004", "Lindau"),
+    Sensor("WS_005", "Konstanz"),
 ]
 
 
@@ -39,8 +39,8 @@ def insert_measurement(measurement):
         cur = conn.cursor()
         cur.execute(
             """
-            INSERT INTO measurement (timestamp, sensor_id, location, temperature, humidity, pressure, wind_speed, wind_direction) 
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
+            INSERT INTO measurement (timestamp, sensor_id, location, temperature, humidity, wind_speed) 
+            VALUES (%s, %s, %s, %s, %s, %s);
             """,
             (
                 datetime.now(),
@@ -48,9 +48,7 @@ def insert_measurement(measurement):
                 measurement["location"],
                 measurement["temperature"],
                 measurement["humidity"],
-                measurement["pressure"],
                 measurement["wind_speed"],
-                measurement["wind_direction"],
             ),
         )
         conn.commit()
@@ -62,17 +60,15 @@ def insert_measurement(measurement):
 
 def generate_data():
     """
-    Startet die Simulation.
-
-    Diese Funktion wählt zufällig einen Sensor aus der Liste 'sensors' aus, generiert eine Messung
+    Startet die Simulation. Wählt zufällig einen Sensor aus der Liste 'sensors' aus, generiert eine Messung
     und speichert die Daten in der Datenbank. Zwischen den Messungen wird eine Pause von 'CYCLE_TIME'
-    Sekunden eingelegt. Die Simulation läuft ununterbrochen, bis sie manuell durch eine Tastenkombination
+    Sekunden eingelegt. Die Simulation läuft solange, bis sie manuell durch eine Tastenkombination
     (z.B. STRG+C) gestoppt wird.
 
     Ausnahme:
         KeyboardInterrupt: Wird ausgelöst, wenn die Simulation manuell vom Benutzer gestoppt wird.
     """
-    print("Simulation gestartet (STRG+C zum Stoppen)")
+    print("Generator gestartet (STRG+C zum Stoppen)")
     try:
         while True:
             sensor = random.choice(sensors)  # Zufällige Wetterstation auswählen
@@ -80,7 +76,7 @@ def generate_data():
             insert_measurement(measurement)  # In Datenbank speichern
             time.sleep(CYCLE_TIME)  # Pause
     except KeyboardInterrupt:
-        print("\nSimulation gestoppt.")
+        print("\n Generator gestoppt.")
 
 
 # Routine starten
