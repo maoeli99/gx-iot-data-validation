@@ -13,5 +13,5 @@ BATCH_DEFINITION = "last_day_batch"
 EXPECTATION_SUITE = "weather_data_expectation_suite"
 VALIDATION_DEFINITION = "weather_data_validation_definition"
 CHECKPOINT_NAME = "weather_data_validation_checkpoint"
-INTERVAL_SECONDS = 10
+INTERVAL_SECONDS = 86400
 CYCLE_TIME = 0.05
