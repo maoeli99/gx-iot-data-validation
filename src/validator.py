@@ -42,3 +42,4 @@ thread.start()
 
 # FastAPI-Server starten
 uvicorn.run(app, host="0.0.0.0", port=8000)
+print("Validator gestoppt")
