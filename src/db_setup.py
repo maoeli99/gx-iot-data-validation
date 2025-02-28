@@ -33,9 +33,7 @@ def create_measurement_table(conn):
         location TEXT,
         temperature DOUBLE PRECISION,
         humidity DOUBLE PRECISION,
-        pressure DOUBLE PRECISION,
-        wind_speed DOUBLE PRECISION,
-        wind_direction DOUBLE PRECISION
+        wind_speed DOUBLE PRECISION
     );
     """
     try:
@@ -54,17 +52,15 @@ def insert_sample_data(conn):
     Fügt einen Beispieldatensatz in die Tabelle 'measurement' ein.
     """
     insert_data_query = """
-    INSERT INTO measurement (sensor_id, location, temperature, humidity, pressure, wind_speed, wind_direction)
-    VALUES (%s, %s, %s, %s, %s, %s, %s);
+    INSERT INTO measurement (sensor_id, location, temperature, humidity, wind_speed)
+    VALUES (%s, %s, %s, %s, %s);
     """
     sample_data = (
         "WS_001",  # sensor_id
-        "Berlin",  # location
+        "Ravensburg",  # location
         22.5,  # temperature
-        45.0,  # humidity
-        1013.25,  # pressure
+        60.0,  # humidity
         5.5,  # wind_speed
-        180.0,  # wind_direction
     )
     try:
         with conn.cursor() as cur:
