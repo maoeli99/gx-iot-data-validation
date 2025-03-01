@@ -5,10 +5,10 @@ Dieses Projekt demonstriert die Implementierung einer automatisierten Datenvalid
 
 Diese README-Datei führt Schritt für Schritt durch die Installation und Ausführung des Projekts.
 
-**Verwendete Python-Version: 3.11.3**
-
 ---
 ## Installation und Ausführung
+
+####**Verwendete Python-Version: 3.11.3**
 
 ### **Schritt 1: Installation der Projektabhängigkeiten**
 Zunächst müssen alle erforderlichen Abhängigkeiten installiert werden. Diese sind in der Datei `requirements.txt` aufgelistet und können mit folgendem Befehl installiert werden:
