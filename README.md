@@ -8,7 +8,7 @@ Diese README-Datei führt Schritt für Schritt durch die Installation und Ausfü
 ---
 ## Installation und Ausführung
 
-####**Verwendete Python-Version: 3.11.3**
+### Verwendete Python-Version: **3.11.3**
 
 ### **Schritt 1: Installation der Projektabhängigkeiten**
 Zunächst müssen alle erforderlichen Abhängigkeiten installiert werden. Diese sind in der Datei `requirements.txt` aufgelistet und können mit folgendem Befehl installiert werden:
