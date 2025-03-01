@@ -5,6 +5,8 @@ Dieses Projekt demonstriert die Implementierung einer automatisierten Datenvalid
 
 Diese README-Datei führt Schritt für Schritt durch die Installation und Ausführung des Projekts.
 
+**Verwendete Python-Version: 3.11.3**
+
 ---
 ## Installation und Ausführung
 
