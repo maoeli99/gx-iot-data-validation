@@ -58,7 +58,7 @@ python db_setup.py
 #### **Was macht `db_setup.py`?**
 - Stellt eine Verbindung zur PostgreSQL-Datenbank her
 - Erstellt die Tabelle `measurement`, falls sie noch nicht existiert
-- Definiert das Schema für die Speicherung der Sensordaten (u. a. Zeitstempel, Sensor-ID, Messwerte für Temperatur, Luftfeuchtigkeit und Windgeschwindigkeit)
+- Definiert das Schema für die Speicherung der Sensordaten
 - Schreibt einen Test-Datensatz in die Datenbank, um die Funktionsweise zu prüfen
 
 ---
