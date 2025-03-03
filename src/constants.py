@@ -14,4 +14,4 @@ EXPECTATION_SUITE = "weather_data_expectation_suite"
 VALIDATION_DEFINITION = "weather_data_validation_definition"
 CHECKPOINT_NAME = "weather_data_validation_checkpoint"
 INTERVAL_SECONDS = 86400
-CYCLE_TIME = 0.05
+CYCLE_TIME = 1
