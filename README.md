@@ -23,6 +23,8 @@ Dadurch werden u. a. folgende Hauptkomponenten installiert:
 - **Pandas & NumPy** für die Datenverarbeitung
 - **FastAPI & Uvicorn** zur webbasierten Bereitstellung der Validierungsergebnisse
 
+Es empfiehlt sich, eine virtuelle Umgebung (venv) anzulegen und dort die Projektabhängigkeiten zu installieren.
+
 ---
 ### **Schritt 2: Aufsetzen einer PostgreSQL-Datenbank**
 Das Projekt nutzt eine PostgreSQL-Datenbank zur Speicherung der generierten Sensordaten. Die Datenbank muss mit folgender Konfiguration aufgesetzt werden:
