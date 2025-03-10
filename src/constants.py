@@ -13,5 +13,5 @@ BATCH_DEFINITION = "last_day_batch"
 EXPECTATION_SUITE = "weather_data_expectation_suite"
 VALIDATION_DEFINITION = "weather_data_validation_definition"
 CHECKPOINT_NAME = "weather_data_validation_checkpoint"
-INTERVAL_SECONDS = 86400
-CYCLE_TIME = 1
+INTERVAL_SECONDS = 86400  #Hier Zykluszeit in Sek. der Validierung konfigurieren (default: 1x am Tag)
+CYCLE_TIME = 1 #Hier Zykluszeit in Sek. der Generierung eines Datenpunkts konfigurieren (default: sekündlich)
