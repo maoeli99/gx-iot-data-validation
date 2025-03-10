@@ -6,8 +6,9 @@ Dieses Projekt demonstriert die Implementierung einer automatisierten Datenvalid
 Diese README-Datei führt Schritt für Schritt durch die Installation und Ausführung des Projekts.
 
 ---
-## Installation und Ausführung
+## Installation
 
+### Verwendetes OS: **Windows 11** (alle nachfolgenden Befehle gelten ausschließlich für Windows-Systeme)
 ### Verwendete Python-Version: **3.11.3**
 
 ### **Schritt 1: Installation der Projektabhängigkeiten**
@@ -49,8 +50,19 @@ docker run -d --name my_postgres_container \
 
 Dieser Befehl startet eine PostgreSQL-Datenbank in einem Docker-Container mit den oben genannten Zugangsdaten.
 
+## Ausführung
+
+### Wichtiger Hinweis
+
+Alle Skripte in diesem Projekt müssen **aus dem Verzeichnis `src` heraus** ausgeführt werden, da sie relative Pfade verwenden. Andernfalls kann es zu Fehlern beim Laden von Dateien oder Modulen kommen.  
+Verwenden Sie daher stets den folgenden Befehl, um sicherzustellen, dass das Skript im richtigen Verzeichnis läuft:
+
+```bash
+cd src && python script.py
+```
+
 ---
-### **Schritt 3: Ausführung des Skripts `db_setup.py`**
+### **Schritt 1: Ausführung des Skripts `db_setup.py`**
 Sobald das Datenbanksystem bereit ist, muss das Datenbankschema eingerichtet werden. Dies erfolgt durch das folgende Skript:
 
 ```sh
@@ -64,7 +76,7 @@ python db_setup.py
 - Schreibt einen Test-Datensatz in die Datenbank, um die Funktionsweise zu prüfen
 
 ---
-### **Schritt 4: Erstellung einer lokalen GX-Umgebung**
+### **Schritt 2: Erstellung einer lokalen GX-Umgebung**
 Um eine lokale GX-Umgebung zu erzeugen, muss das Jupyter-Notebook `gx_setup.ipynb` vollständig ausgeführt werden.
 
 #### **Was macht `gx_setup.ipynb`?**
@@ -80,7 +92,7 @@ jupyter notebook gx_setup.ipynb
 ```
 
 ---
-### **Schritt 5: Ausführung des Skripts `generator.py`**
+### **Schritt 3: Ausführung des Skripts `generator.py`**
 Nun kann die Generierung von Sensordaten gestartet werden:
 
 ```sh
@@ -94,7 +106,7 @@ python generator.py
 - Speichert die Daten fortlaufend in die PostgreSQL-Datenbank
 
 ---
-### **Schritt 6: Ausführung des Skripts `validator.py`**
+### **Schritt 4: Ausführung des Skripts `validator.py`**
 Nachdem die Sensordaten generiert werden, kann die Validierung gestartet werden:
 
 ```sh
