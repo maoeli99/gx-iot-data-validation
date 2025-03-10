@@ -107,6 +107,9 @@ py generator.py
 - Integriert absichtlich fehlerhafte Messwerte, um die Datenvalidierung zu testen
 - Speichert die Daten fortlaufend in die PostgreSQL-Datenbank
 
+#### **Hinweis zur Nutzung des Generators**
+Nach dem Start des Generators wird das darunterliegende Terminal blockiert. Weitere Skripte müssen in einem neuen Terminal gestartet werden. Der Generator kann jederzeit mit **Strg + C** beendet werden.
+
 ---
 ### **Schritt 4: Ausführung des Skripts `validator.py`**
 Nachdem die Sensordaten generiert werden, kann die Validierung gestartet werden:
@@ -126,5 +129,8 @@ Die Validierungsergebnisse können anschließend unter folgender Adresse im Brow
 ```sh
 http://localhost:8000
 ```
+#### **Hinweis zur Nutzung des Validators**
+Nach dem Start des Validators wird das darunterliegende Terminal blockiert. Weitere Skripte müssen in einem neuen Terminal gestartet werden. Der Validator kann jederzeit mit **Strg + C** beendet werden.
+
 ---
 
