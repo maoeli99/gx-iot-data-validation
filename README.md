@@ -24,7 +24,20 @@ Dadurch werden u. a. folgende Hauptkomponenten installiert:
 - **Pandas & NumPy** für die Datenverarbeitung
 - **FastAPI & Uvicorn** zur webbasierten Bereitstellung der Validierungsergebnisse
 
-Es empfiehlt sich, eine virtuelle Umgebung (venv) anzulegen und dort die Projektabhängigkeiten zu installieren.
+Es empfiehlt sich, eine virtuelle Umgebung (venv) im Root-Verzeichnis des Projekts (./gx-iot-data-validation-main) anzulegen und dort die Projektabhängigkeiten zu installieren:
+
+Erstellen der virtuellen Umgebung:
+
+```sh
+py -m venv .venv
+```
+Aktivieren der virtuellen Umgebung:
+
+```sh
+.venv\Scripts\activate
+```
+
+Anschließend pip install ausführen.
 
 ---
 ### **Schritt 2: Aufsetzen einer PostgreSQL-Datenbank**
@@ -61,7 +74,7 @@ Alle Skripte in diesem Projekt müssen **aus dem Verzeichnis `src` heraus** ausg
 Sobald das Datenbanksystem bereit ist, muss das Datenbankschema eingerichtet werden. Dies erfolgt durch das folgende Skript:
 
 ```sh
-python db_setup.py
+py db_setup.py
 ```
 
 #### **Was macht `db_setup.py`?**
@@ -85,7 +98,7 @@ Um eine lokale GX-Umgebung zu erzeugen, muss das Jupyter-Notebook `gx_setup.ipyn
 Nun kann die Generierung von Sensordaten gestartet werden:
 
 ```sh
-python generator.py
+py generator.py
 ```
 
 #### **Was macht `generator.py`?**
@@ -99,7 +112,7 @@ python generator.py
 Nachdem die Sensordaten generiert werden, kann die Validierung gestartet werden:
 
 ```sh
-python validator.py
+py validator.py
 ```
 
 #### **Was macht `validator.py`?**
