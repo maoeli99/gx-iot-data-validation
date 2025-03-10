@@ -80,12 +80,6 @@ Um eine lokale GX-Umgebung zu erzeugen, muss das Jupyter-Notebook `gx_setup.ipyn
 - Definiert eine Expectation Suite mit Regeln zur Datenvalidierung
 - Erstellt einen Checkpoint zur zyklischen Validierung der eingehenden Sensordaten
 
-Das Notebook kann über Jupyter geöffnet und schrittweise ausgeführt werden:
-
-```sh
-jupyter notebook gx_setup.ipynb
-```
-
 ---
 ### **Schritt 3: Ausführung des Skripts `generator.py`**
 Nun kann die Generierung von Sensordaten gestartet werden:
