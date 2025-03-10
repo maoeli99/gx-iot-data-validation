@@ -55,11 +55,6 @@ Dieser Befehl startet eine PostgreSQL-Datenbank in einem Docker-Container mit de
 ### Wichtiger Hinweis
 
 Alle Skripte in diesem Projekt müssen **aus dem Verzeichnis `src` heraus** ausgeführt werden, da sie relative Pfade verwenden. Andernfalls kann es zu Fehlern beim Laden von Dateien oder Modulen kommen.  
-Verwenden Sie daher stets den folgenden Befehl, um sicherzustellen, dass das Skript im richtigen Verzeichnis läuft:
-
-```bash
-cd src && python script.py
-```
 
 ---
 ### **Schritt 1: Ausführung des Skripts `db_setup.py`**
